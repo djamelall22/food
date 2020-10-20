@@ -16,6 +16,7 @@
     <!-- header -->
     <header>
       <a href="#" class="logo">Food<span>.</span></a>
+      <div class="menu-toggle" onclick="toggleMenu()"></div>
       <ul class="navigation">
         <li><a href="#banner">Home</a></li>
         <li><a href="#about">About</a></li>
@@ -245,6 +246,13 @@
       </div>
     </section>
 
+    <!-- copyright 
+    
+    -->
+    <section class="copyright">
+      <p>Copyright 2020 <span>Djamel Eddine M</span></p>
+    </section>
+
     <!-- javascript
     
     
@@ -254,6 +262,11 @@
         const header = document.querySelector('header');
         header.classList.toggle('sticky', window.scrollY > 0);
       });
+
+      function toggleMenu() {
+        const toggler = document.querySelector('menu-toggle');
+        toggler.classList.toggle('active');
+      }
     </script>
   </body>
 </html>
