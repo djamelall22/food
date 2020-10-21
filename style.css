@@ -154,13 +154,13 @@ section {
   font-weight: 700;
 }
 
-.row .col50 .img-boxe {
+.row .col50 .img-box {
   position: relative;
   width: 100%;
   height: 100%;
 }
 
-.row .col50 .img-boxe img {
+.row .col50 .img-box img {
   position: absolute;
   top: 0;
   left: 0;
@@ -309,22 +309,11 @@ section {
   flex-direction: column;
 }
 
-.testimonials .content .box .image {
-  position: relative;
-  width: 80px;
-  margin: 80px;
-  margin-bottom: 20px;
+.testimonials .image img {
+  width: 100px;
+  height: 100px;
   border-radius: 50%;
-  overflow: hidden;
-}
-
-.testimonials .content .box .image img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  margin-bottom: 20px;
 }
 
 .testimonials .content .box .text {
@@ -425,6 +414,10 @@ section {
 /* end of copyright */
 
 @media (max-width: 991px) {
+  body {
+    text-align: center;
+  }
+
   header,
   header.sticky {
     padding: 10px 20px;
@@ -432,6 +425,28 @@ section {
 
   header .navigation {
     display: none;
+  }
+
+  header .navigation.active {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 68px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #fff;
+  }
+
+  header .navigation li {
+    margin-left: 0;
+  }
+
+  header .navigation li a {
+    color: #111;
+    font-size: 1.6em;
   }
 
   .menu-toggle {
@@ -443,4 +458,72 @@ section {
     background-repeat: no-repeat;
     cursor: pointer;
   }
-} ;
+
+  .menu-toggle.active {
+    background: url(./images/close.png) center center;
+    background-size: 25px;
+    background-repeat: no-repeat;
+    cursor: pointer;
+  }
+
+  header.sticky .menu-toggle {
+    filter: invert(1);
+  }
+
+  section {
+    padding: 20px;
+  }
+
+  .banner .content h2 {
+    font-size: 3em;
+    color: #fff;
+  }
+
+  .row {
+    flex-direction: column;
+  }
+  .row .col50 {
+    position: relative;
+    width: 100%;
+  }
+  .row .col50 .img-box {
+    height: 300px;
+    margin-top: 20px;
+  }
+
+  .menu .content {
+    margin-top: 20px;
+  }
+
+  .menu .content .box {
+    margin-top: 10px;
+  }
+
+  .menu .content .box .image {
+    height: 260px;
+  }
+
+  .title {
+    font-size: 1.8em;
+    line-height: 1.5em;
+    margin-bottom: 15px;
+    font-weight: 300px;
+  }
+
+  .testimonials .content .box {
+    margin: 10px;
+    padding: 20px;
+  }
+
+  .contact-form {
+    margin-top: 20px;
+    margin-bottom: 30px;
+    padding: 35px 40px;
+  }
+}
+
+@media (max-width: 991px) {
+  .banner .content h2 {
+    font-size: 2.2em;
+  }
+}

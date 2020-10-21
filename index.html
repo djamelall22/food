@@ -18,12 +18,12 @@
       <a href="#" class="logo">Food<span>.</span></a>
       <div class="menu-toggle" onclick="toggleMenu()"></div>
       <ul class="navigation">
-        <li><a href="#banner">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#menu">Menu</a></li>
-        <li><a href="#expert">Expert</a></li>
-        <li><a href="#testimonials">Testimonials</a></li>
-        <li><a href="#contact ">Contact</a></li>
+        <li><a href="#banner" onclick="toggleMenu()">Home</a></li>
+        <li><a href="#about" onclick="toggleMenu()">About</a></li>
+        <li><a href="#menu" onclick="toggleMenu()">Menu</a></li>
+        <li><a href="#expert" onclick="toggleMenu()">Expert</a></li>
+        <li><a href="#testimonials" onclick="toggleMenu()">Testimonials</a></li>
+        <li><a href="#contact " onclick="toggleMenu()">Contact</a></li>
       </ul>
     </header>
     <!-- banner -->
@@ -61,7 +61,7 @@
           </p>
         </div>
         <div class="col50">
-          <div class="img-boxe">
+          <div class="img-box">
             <img src="./images/img1.jpg" alt="pizza" />
           </div>
         </div>
@@ -264,8 +264,10 @@
       });
 
       function toggleMenu() {
-        const toggler = document.querySelector('menu-toggle');
-        toggler.classList.toggle('active');
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navigation = document.querySelector('.navigation');
+        menuToggle.classList.toggle('active');
+        navigation.classList.toggle('active');
       }
     </script>
   </body>
